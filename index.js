@@ -14,45 +14,144 @@
 
 // 1
 
-function biggerNumber(a, b) {
-  if (a > b) {
-    console.log(`${a} is highest number`);
-  } else if (a < b) {
-    console.log(`${b} is highest number`);
-  } else if (a === b) {
-    console.log(`Both numbers are equal`);
-  }
-}
+// function biggerNumber(a, b) {
+//   if (a > b) {
+//     console.log(`${a} is highest number`);
+//   } else if (a < b) {
+//     console.log(`${b} is highest number`);
+//   } else if (a === b) {
+//     console.log(`Both numbers are equal`);
+//   }
+// }
 
-biggerNumber(4, 5);
-biggerNumber(6, 5);
-biggerNumber(6, 6);
+// biggerNumber(4, 5);
+// biggerNumber(6, 5);
+// biggerNumber(6, 6);
 
-// 2
+// // 2
 
-for (let i = 1; i < 11; i++) {
-  console.log(i);
-}
+// for (let i = 1; i < 11; i++) {
+//   console.log(i);
+// }
 
-// 3
+// // 3
 
-for (let i = 0; i < 11; i++) {
-  if (i % 2 === 0) {
-    console.log(i);
-  }
-}
+// for (let i = 0; i < 11; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+// }
 
 // 4
 
-for (let i = 1; i < Math.floor(Math.random() * 10); i) {
-  console.log(i);
-  console.log(i);
-  console.log(i);
-  console.log(i);
-  console.log(i);
-}
+// for (i = 0; i < 5; i++) {
+//   console.log(Math.floor(Math.random() * 10 + 1));
+// }
 
 // 5
-while (1 < 10) {
-  const num = Math.floor(Math.random() * 5);
+// let i = 1;
+// while (i < 5) {
+//   if (i === 4) {
+//     console.log(5);
+//   } else {
+//     const num = Math.floor(Math.random() * 10);
+//     console.log(num);
+//   }
+
+//   i++;
+// }
+
+// 6
+
+// function getRandom(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// }
+
+// const arr = Array.from({ length: getRandom(20, 30) }, () => getRandom(10, 30));
+// console.log(arr);
+
+// function arrayMax(arr) {
+//   return arr.reduce(function (p, v) {
+//     return p > v ? p : v;
+//   });
+// }
+// console.log(arrayMax(arr));
+
+// 7
+
+// function getRandom(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// }
+
+// const letters = ["A", "B", "C", "D"];
+
+// const newArr = [];
+// for (let i = 1; i <= 100; i++) {
+//   const ran = getRandom(0, 3);
+//   const letter = letters[ran];
+//   newArr.push(letter);
+// }
+
+// console.log(newArr);
+
+// const aCount = newArr.filter((l) => l === "A").length;
+// console.log(aCount);
+
+// const bCount = newArr.filter((l) => l === "B").length;
+// console.log(bCount);
+
+// const cCount = newArr.filter((l) => l === "C").length;
+// console.log(cCount);
+
+// const dCount = newArr.filter((l) => l === "D").length;
+// console.log(dCount);
+
+// 8
+function lygineSuma(a, b) {
+  if (typeof a === "number" && typeof b === "number") {
+    const sum = a + b;
+    if (sum % 2 === 0) {
+      return sum;
+    } else {
+      return `Suma nelygine`;
+    }
+  } else if (Array.isArray(a) && Array.isArray(b)) {
+    const arrLength = [...a, ...b].length;
+    if (arrLength % 2 === 0) {
+      return arrLength;
+    } else {
+      return `Suma nelygine`;
+    }
+  }
 }
+
+console.log(lygineSuma(5, 6));
+
+console.log(lygineSuma([1, 2], [2, 3]));
+
+// 9
+
+function pirminisSkaicius(a) {
+  if (typeof a === "number") {
+    a % 1 === 0;
+    return a;
+  }
+  return true;
+}
+
+pirminisSkaicius(40);
+
+
+ pirminisSkaicius(a) => (typeof a === "number") ? a % 1 === 0;
+  if (typeof a === "number") {
+    a % 1 === 0;
+    return a;
+  }
+  return true;
+}
+
+pirminisSkaicius(40);
